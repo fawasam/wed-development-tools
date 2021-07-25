@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #111;
+    font-size: 2rem;
+    font-family: sans-serif;
+    letter-spacing: -1px;
+    background-size: 340px auto;
+    min-height: calc(100vh -100px);
+    margin: 50px;
+    background-position: fixed;
+    background: #7b4397;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.item{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    padding: 10px;
+    background-color: #cfc312;
+
+    border-radius: 3px;
+}
+.container{
+    display: inline-grid;
+    grid-template-columns:  200px 400px ;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    grid-gap: 20px; 
+}

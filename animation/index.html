@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+           /* position: relative; */
+            font-family: sans-serif;
+        }
+        .link{
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            margin-left: 340px;
+            margin-top: 50px;
+            padding: 10px 0;
+            color: rgb(221, 16, 16);
+        }
+        .link:hover{
+            color: #e74694;
+
+        }
+        .link::after{
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #e74694;
+            transform: scaleX(0);
+            transition: transform 0.2s;
+        }
+        .link:hover::after{
+            transform: scaleX(1);
+        }
+
+        .btn-class{     
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .btn{
+                border: 1px solid #e74694;
+                padding: 20px;
+                color: #e74694;
+                background: transparent;
+                transition: color .3s background .3s;
+                cursor: pointer;
+            }
+            .btn:hover{
+                background: #e74694;
+                color: #ffff;
+                
+            }
+            .meal{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-top: 100px;
+                overflow: hidden;
+                background-color: #0000;
+            }
+            .meal img{
+                width: 50%;
+                height: auto;
+                opacity: 0.7;
+                transform: scale(1.15);
+                transition: transform .5s,opacity .5s;
+            }
+            .meal img:hover{
+                opacity: 1;
+                transform: scale(1.03);
+            }
+            .fadein{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                opacity: 0;
+                transform: translateX(-20vw);
+                transition: 
+                opacity 500ms ease-in,
+                transform 500ms ease-in
+                ;
+            }
+            .fadein:hover{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+            /* .in-view{
+                opacity: 0.5;
+                transform: translateX(0px);
+            } */
+    </style>
+</head>
+<body>
+    <a href="#" class="link">Hover me</a>
+    <div class="fadein in-view">
+        <h1>Your Website IS here</h1>
+        <button class="btn">Contact me</button>
+    </div>
+
+<div class="btn-class">
+    <button class="btn">Contact me</button>
+</div>
+<div class="meal">
+    <figure>
+        <img src="https://static.toiimg.com/photo/76942221.cms" alt="">
+
+    </figure>
+</div>
+<div class="meal">
+    <img src="https://static.toiimg.com/photo/76942221.cms" alt="">
+</div>
+<div class="meal">
+    <img src="https://static.toiimg.com/photo/76942221.cms" alt="">
+</div>
+
+
+
+</body>
+</html>
