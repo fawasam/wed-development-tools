@@ -1,0 +1,49 @@
+1] CSS FRAMEWORK made up of utility classes
+
+2] lower-level than bootstrap and materialize
+
+
+
+starting
+--------
+src/styles.css 
+
+/* ./your-css-folder/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+then make package.json script
+
+    "build-css":"tailwindcss build -i src/styles.css -o public/styles.css"
+
+then npm run buid-css
+
+
+
+
+Customizing
+------------
+
+npx tailwindcss init --full
+
+section of your tailwind.config.js file.
+edit and run again 
+ npm run buid-css
+
+
+responsive 
+----------
+
+Breakpoint prefix	Minimum width	CSS
+sm	640px	@media (min-width: 640px) { ... }
+md	768px	@media (min-width: 768px) { ... }
+lg	1024px	@media (min-width: 1024px) { ... }
+xl	1280px	@media (min-width: 1280px) { ... }
+2xl	1536px	@media (min-width: 1536px) { ... }
+
+
+
+icon
+-----
+https://heroicons.com/
